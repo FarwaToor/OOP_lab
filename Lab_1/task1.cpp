@@ -53,7 +53,11 @@ int main()
 
             
         }
-        SGPA[i] = ((GPA[0] * CH) + (GPA[1] * CH) + (GPA[2] * CH)) / 9;
+	for(int j=0;j<3;j++)
+	{
+        SGPA[i] += (GPA[j] * CH);
+	}
+	SGPA[i]=SGPA[i]/9;
 
         cout << " SGPA OF " << i + 1 << " student is : "<<SGPA[i];
 
